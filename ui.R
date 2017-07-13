@@ -13,21 +13,31 @@ library(shiny)
 shinyUI(fluidPage(
   
   # Application title
-  titlePanel("Old Faithful Geyser Data"),
+  titlePanel("Manner Predicting Using Machine Learning"),
   
   # Sidebar with a slider input for number of bins 
   sidebarLayout(
     sidebarPanel(
-       sliderInput("bins",
-                   "Number of bins:",
-                   min = 1,
-                   max = 50,
-                   value = 30)
+        sliderInput(
+                "slider1",
+                "Select one entry from test data",
+                min = 1,
+                max = 5885,
+                value = 2500),
+        
+        selectInput("select1", "Choose a model:",
+                    choices = c("Regression Tree", "Random Forest")),
+        submitButton("Submit")
     ),
     
     # Show a plot of the generated distribution
     mainPanel(
-       plotOutput("distPlot")
+        plotOutput("Plot_Tree"),
+        textOutput('text_Tree'),
+        textOutput("text_True"),
+        plotOutput("Plot_Rf"),
+        textOutput('text_Rf'),
+        textOutput("text_Rf_True")
     )
   )
 ))
