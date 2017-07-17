@@ -8,10 +8,10 @@
 #
 
 library(shiny)
-library(rpart)
-library(caret)
-library('e1071')
-require(randomForest)
+# library(rpart)
+# library(caret)
+# library('e1071')
+# require(randomForest)
 
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
@@ -51,12 +51,12 @@ shinyServer(function(input, output) {
         
         Model_RF=randomForest(classe~.,
                               data=Training_Data,
-                              ntree=100, 
+                              ntree=10, 
                               importance=TRUE)
         
         output$Plot_Rf<- renderPlot({
                 if(input$select1 == "Random Forest"){
-                        varImpPlot(Model_RF,)
+                        varImpPlot(Model_RF)
                 }
         })
         
