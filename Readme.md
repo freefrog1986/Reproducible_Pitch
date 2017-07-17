@@ -26,7 +26,7 @@ Press submitt button to predict using the value you picked.
 Result will appear below the figures.
 
 ## Any suggestion
-Thank you for using my first shiny app, you can send any suggestions to my email:
+Thank you for using my first shiny app, any suggestions connecting to my email:
 baihu1111@126.com
 
 
