@@ -11,7 +11,7 @@ This presentation is for introducing my first simple Shiny App.
 Let's try this App first, open [this link](https://freefrog.shinyapps.io/Reproducible_Pitch/)
 in your webbrowser to access my App.
 
-you can find source code at [this github link](https://freefrog1986.github.io/Reproducible_Pitch/my_shiny_app.html#/2)
+you can find source code at [this github link](https://github.com/freefrog1986/Reproducible_Pitch)
 
 Also there is a readme file about how to get start with this App.
 
@@ -55,7 +55,8 @@ You have to be patient cause this part run a bit slow.
 Testing the model
 ========================================================
 By selecting a value from the slider of this app, you can test this two model.   
-When selecting a value server will predict using models and show the result and real value to the interface for comparing.   
+When selecting a value, server will predict using models.   
+Then show results and real value to the interface for comparing.   
 
 ```r
 output$text_Tree <- renderText({
